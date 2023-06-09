@@ -2,39 +2,26 @@
 <html>
   <head>
     <title>jovian carrers</title>
-    <style>
-      h1 {
-        font-size:40px;
-        font-family:Roboto;
-        font-weight:normal;
-        color:rgb(100,0,0)
-        }
-       #banner {
-         width:100%;
-         height:160px;
-         object-fit:cover;
-        }
-      h2 {
-        font-size:30px;
-        font-family:Roboto;
-        font-weight:normal;
-        color:rgb(100,22,220)
-        }
-      p {
-        font-size:20px;
-        font-family:Roboto;
-        font-weight:normal;
-        color:rgb(100,0s,220)
-        }
-    </style>
+    
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
   <body>
+    <div class="container">
     <h1><center>Jovian carrers</center</h1>
-    <img id="banner" src="https://jovian-carrers-website--bhargav4036.repl.co/static/www.jpg">
-    <h2>Jovian carrers</h2>
-    <p>A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.</p>
-    <h2>job openings</h2>
+    <img class="img-fluid" id="banner" src="https://jovian-carrers-website--bhargav4036.repl.co/static/www.jpg">
+    <h2>{{company}} carrers</h2>
+    <p class="fs-6 textalign:left" >A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.</p>
+      <h2>job openings</h2>
+      <div>
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+    
   <h2>show jobs</h2>
-    <button>contact us</button>
+    <button type="button" class="btn btn-outline-primary">contact us</button>
+    </div>
   </body>
 </html>
